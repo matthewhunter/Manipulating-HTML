@@ -23,7 +23,7 @@ createSection('Element Changes Background Color On Hover')
 createDiv()
 
 // 4
-createSection('Text Color Changes On Button Click')
+createSection('Text Color Changes On Click')
 createParagraph(paragraphString)
 
 // 5

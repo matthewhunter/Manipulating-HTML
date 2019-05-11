@@ -16,7 +16,7 @@ const descriptions = [{
     name: 'Element Changes Background Color On Hover',
     text: `Hover over the element below and it's background color will change to a random color from an array of values.  When hovering ends, the background color will restore to it's original color.`
 }, {
-    name: 'Text Color Changes On Button Click',
+    name: 'Text Color Changes On Click',
     text: 'Click in the text area to change the color. This goes through the same predefined array as the background colors above, but turn the toggle off to switch to any random color.'
 }, {
     name: 'Add Name On Button Click',

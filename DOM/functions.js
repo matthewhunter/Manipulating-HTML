@@ -4,9 +4,23 @@ const randomGreeting = () => greetings[Math.floor(Math.random() * greetings.leng
 const createDocument = () => {
     container = document.createElement('div')
     container.classList.add('container')
-    title = document.createElement('h1')
+    row = document.createElement('div')
+    row.classList.add('row', 'center-align')
+    title = document.createElement('h2')
     title.append(document.title)
-    container.append(title)
+    link = document.createElement('a')
+    link.append(document.createTextNode('Switch to jQuery'))
+    link.href = '../jQuery/index.html'
+    link.title = 'Switch to jQuery'
+    link.classList.add('waves-effect', 'waves-light', 'btn-large', 'hoverable', randomColor())
+    link.style.marginBottom = '1rem'
+    icon = document.createElement('i')
+    icon.append(document.createTextNode('swap_horizontal_circle'))
+    icon.classList.add('material-icons', 'left')
+    link.append(icon)
+    row.append(title)
+    row.append(link)
+    container.append(row)
     document.body.append(container)
     return container
 }
@@ -154,6 +168,7 @@ const checkInput = (textInput) => {
 
 const createDiv = () => {
     row = createRow()
+    row.classList.add('center-align')
     div = document.createElement('div')
     div.classList.add('card-panel', 'waves-effect', elementColor, 'hoverable')
     div.append(document.createTextNode(`If you hover over me, do I not change?`))
