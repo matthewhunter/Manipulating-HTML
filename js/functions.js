@@ -10,7 +10,7 @@ const createDocument = () => {
     title.append(document.title)
     link = document.createElement('a')
     link.append(document.createTextNode('Switch to jQuery'))
-    link.href = '../jquery/index.html'
+    link.href = '../jquery/'
     link.title = 'Switch to jQuery'
     link.classList.add('waves-effect', 'waves-light', 'btn-large', 'hoverable', randomColor())
     link.style.marginBottom = '1rem'
@@ -174,6 +174,7 @@ const createDiv = () => {
     div.append(document.createTextNode(`If you hover over me, do I not change?`))
     div.addEventListener('mouseover', (e) => changeBackgroundColor(e))
     div.addEventListener('mouseout', (e) => restoreBackgroundColor(e))
+    div.addEventListener('click', (e) => clickBackgroundColor(e))
     col.append(div)
     contentContainer.append(row)
 }
@@ -217,6 +218,13 @@ const changeBackgroundColor = (e) => {
 const restoreBackgroundColor = (e) => {
     e.target.classList.remove(divTempColor)
     e.target.classList.add(elementColor)
+}
+
+const clickBackgroundColor = (e) => {
+    e.target.classList.remove(elementColor)
+    e.target.classList.remove(divTempColor)
+    divTempColor = randomColor()
+    e.target.classList.add(divTempColor)
 }
 
 const changeTextColor = (e) => {

@@ -9,7 +9,7 @@ const createDocument = () => {
     title = $(`<h2>${document.title}</h2>`)
     link = $('<a/>')
     link.append(document.createTextNode('Switch to JavaScript'))
-    link.attr('href', '../js/index.html')
+    link.attr('href', '../js/')
     link.attr('title', 'Switch to JavaScript')
     link.addClass(`waves-effect waves-light btn-large hoverable ${randomColor()}`)
     link.css('margin-bottom', '1rem')
@@ -131,7 +131,6 @@ const createTextInput = () => {
     input.addClass('materialize-textarea')
     input.id = 'textbox'
     input.on('input', (e) => {
-        console.log(textInput.val().length)
         if ($(e.target).val().length === 0) {
             customButton.addClass('disabled')
             if (!customButtonPressed) customButton.removeClass('pulse')
@@ -154,7 +153,6 @@ const createTextInput = () => {
 }
 
 const checkInput = (textInput) => {
-    console.log(textInput.val().length)
     if (textInput.val().length === 0) {
         customButton.addClass('disabled')
         if (!customButtonPressed) customButton.removeClass('pulse')
@@ -172,6 +170,7 @@ const createDiv = () => {
     div.append(document.createTextNode(`If you hover over me, do I not change?`))
     div.mouseover( (event) => changeBackgroundColor(event))
     div.mouseout( (event) => restoreBackgroundColor(event))
+    div.click( (event) => clickBackgroundColor(event))
     col.append(div)
     contentContainer.append(row)
 }
@@ -213,6 +212,13 @@ const changeBackgroundColor = (e) => {
 const restoreBackgroundColor = (e) => {
     $(e.target).removeClass(divTempColor)
     $(e.target).addClass(elementColor)
+}
+
+const clickBackgroundColor = (e) => {
+    $(e.target).removeClass(elementColor)
+    $(e.target).removeClass(divTempColor)
+    divTempColor = randomColor()
+    $(e.target).addClass(divTempColor)
 }
 
 const changeTextColor = (e) => {
