@@ -10,7 +10,7 @@ const createDocument = () => {
     title.append(document.title)
     link = document.createElement('a')
     link.append(document.createTextNode('Switch to jQuery'))
-    link.href = '../jQuery/index.html'
+    link.href = '../jquery/index.html'
     link.title = 'Switch to jQuery'
     link.classList.add('waves-effect', 'waves-light', 'btn-large', 'hoverable', randomColor())
     link.style.marginBottom = '1rem'

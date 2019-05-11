@@ -9,7 +9,7 @@ const createDocument = () => {
     title = $(`<h2>${document.title}</h2>`)
     link = $('<a/>')
     link.append(document.createTextNode('Switch to JavaScript'))
-    link.attr('href', '../DOM/index.html')
+    link.attr('href', '../js/index.html')
     link.attr('title', 'Switch to JavaScript')
     link.addClass(`waves-effect waves-light btn-large hoverable ${randomColor()}`)
     link.css('margin-bottom', '1rem')
