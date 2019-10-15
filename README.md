@@ -1,5 +1,7 @@
 # Manipulating HTML using DOM & JQuery
-Covalence
+**Live Version:** https://matt-hunter.github.io/manipulating-html/js/
+
+**Video Review:** https://youtu.be/eabHFdRtxTI
 
 ## Info
 * This lab asks you to perform various tasks, first using only the DOM, and then using only JQuery.
